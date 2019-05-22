@@ -1,0 +1,19 @@
+footer {
+  padding: 2rem 0rem;
+  background: #44525f;
+  color: #fff;
+  ul {
+    li {
+      list-style: none;
+    }
+    a {
+      color: white;
+    }
+  }
+  .subscribe-mail,.subscribe-mail-button {
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 0;
+  }
+
+}
