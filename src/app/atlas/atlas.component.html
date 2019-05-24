@@ -10,11 +10,11 @@
                     <ul class="m-0 list-inline">
                         <li class="list-inline-item">Home</li>
                         <li class="list-inline-item">About</li>
-                        <li class="list-inline-item">Services</li>
+                        <li class="list-inline-item" (click)="jumptoServices()">Services</li>
                         <li class="list-inline-item">Training</li>
                         <li class="list-inline-item">Products</li>
                         <li class="list-inline-item">Blog</li>
-                        <li class="list-inline-item">Contact US</li>
+                        <li class="list-inline-item" (click)="jumptoContact()">Contact Us</li>
                     </ul>
                 </div>
             </div>
@@ -36,7 +36,7 @@
     </div>
 </div>
 <!-- three-blcok -->
-<div class="container my-5 py-2">
+<div class="container my-5 py-2" id="services" >
     <h2 class="font-weight-bold text-center my-4">Our Services</h2>
     <div class="row">
         <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true"
