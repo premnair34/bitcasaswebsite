@@ -4,8 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { AtlasComponent } from './atlas/atlas.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'atlas', component: AtlasComponent },
+  { path: '', component: AtlasComponent },
+  { path: 'atlas', component: HomeComponent },
   { path: '**', redirectTo: '' }
 ];
 

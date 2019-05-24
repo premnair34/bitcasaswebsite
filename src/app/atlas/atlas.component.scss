@@ -1,4 +1,13 @@
+@import "./../../variables.scss";
 .img-section{
     width: 80px;
     height: 80px;
+}
+.list-inline-item {
+    color:$header-color;
+    padding: 15px 10px;
+    cursor: pointer;
+    &:hover {
+        background: $header-bgcolor;
+    }
 }
