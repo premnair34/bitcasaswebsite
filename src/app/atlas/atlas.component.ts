@@ -13,10 +13,7 @@ export class AtlasComponent implements OnInit {
     ngOnInit() {
         AOS.init();
     }
-    jumptoContact() {
-        document.querySelector('#contact').scrollIntoView({behavior: 'smooth'});
-    }
-    jumptoServices() {
-        document.querySelector('#services').scrollIntoView({behavior: 'smooth'});
+    jumpTo(section) {
+        document.querySelector('#'+section).scrollIntoView({behavior: 'smooth'});
     }
 }
