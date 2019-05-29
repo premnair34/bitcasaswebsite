@@ -12,7 +12,7 @@
                         <li class="list-inline-item">About</li>
                         <li class="list-inline-item" (click)="jumpTo('services')">Services</li>
                         <li class="list-inline-item" (click)="jumpTo('training')">Training</li>
-                        <li class="list-inline-item" (click)="jumpTo('product')">Products</li>
+                        <li class="list-inline-item" (click)="jumpTo('products')">Products</li>
                         <li class="list-inline-item">Blog</li>
                         <li class="list-inline-item" (click)="jumpTo('contact')">Contact Us</li>
                     </ul>
@@ -68,7 +68,7 @@
     </div>
 </div>
 <!-- feature (skew background) -->
-<div class="jumbotron jumbotron-fluid feature" id="feature-first">
+<div class="jumbotron jumbotron-fluid feature" id="training">
     <div class="container my-5">
         <div class="row justify-content-between text-center text-md-left">
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
@@ -87,7 +87,7 @@
     </div>
 </div>
 <!-- feature (green background) -->
-<div class="jumbotron jumbotron-fluid feature" id="feature-last">
+<div class="jumbotron jumbotron-fluid feature" id="products">
     <div class="container">
         <div class="row justify-content-between text-center text-md-left">
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
@@ -152,15 +152,10 @@
             <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
         </div>
     </div>
-<<<<<<< HEAD
 </div>
 <!-- client -->
-<div class="jumbotron jumbotron-fluid">
-=======
-</div>
 <!-- client -->
-<div class="jumbotron jumbotron-fluid" id="product">
->>>>>>> master
+<!-- <div class="jumbotron jumbotron-fluid" id="product">
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-md-2 py-2 align-self-center">
@@ -183,7 +178,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- contact -->
 <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(../../assets/images/contact-bk.jpg);">
     <div class="container my-5">
@@ -211,6 +206,15 @@
                             <label for="Email">Your Email</label>
                             <input type="email" class="form-control" id="Email">
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query">Related to</label>
+                        <select class="form-control" id="query" rows="3">
+                             <option value="services">Services</option>
+                             <option value="corporate training">Corporate training</option>
+                             <option value="Blockchain">Blockchain</option>
+                             <option value="big data Consulting">Big Data consulting</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
