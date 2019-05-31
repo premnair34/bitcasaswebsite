@@ -15,7 +15,7 @@ import * as AOS from 'aos';
 })
 export class AtlasComponent implements OnInit {
     contactForm: FormGroup;
-    composeOptions:email.ComposeOptions;
+    relatedItems:any = ['Services','Corporate training','Big Data consulting','Blockchain'];
     constructor( private formbuilder: FormBuilder) {
     }
 
@@ -28,7 +28,7 @@ export class AtlasComponent implements OnInit {
         this.contactForm = this.formbuilder.group({
           name: ['', Validators.required],
           email:['', Validators.required],
-          related:['', Validators.required],
+          related:['Services', Validators.required],
           message:['', Validators.required]
         });
     }
@@ -47,6 +47,10 @@ export class AtlasComponent implements OnInit {
     }
     jumpTo(section) {
         document.querySelector('#'+section).scrollIntoView({behavior: 'smooth'});
+    }
+    scrollContact(section,val){
+      this.jumpTo(section);
+      this.contactForm.controls['related'].setValue(this.relatedItems[val]);
     }
     submitContact(formDirective) {
       console.log(this.contactForm.value);

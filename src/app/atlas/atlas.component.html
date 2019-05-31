@@ -76,7 +76,7 @@
                 <p class="my-4">nearXture enables developers, infrastructure architects, and operators to train
                         <br>with the same expert practitioners that deliver solutions to our clients.
                     </p>
-                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                <a class="btn my-4 font-weight-bold atlas-cta cta-blue" (click)="scrollContact('contact',1)">Learn More</a>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
                 <!-- <img src="../../assets/corporate-training.jpg" alt="Take a look inside" class="mx-auto d-block"> -->
@@ -99,7 +99,7 @@
                     with a full suite of resources, education, and access to our qualified consultant and
                     developer pool. We also offer a wide variety of services.
                 </p>
-                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                <a class="btn my-4 font-weight-bold atlas-cta cta-blue"  (click)="scrollContact('contact',2)">Learn More</a>
             </div>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true"
                 class="col-md-6 align-self-center flex-md-first">
@@ -217,10 +217,7 @@
                     <div class="form-group">
                         <label for="query">Related to *</label>
                         <select class="form-control" id="query" rows="3" required formControlName="related">
-                             <option value="services">Services</option>
-                             <option value="corporate training">Corporate training</option>
-                             <option value="Blockchain">Blockchain</option>
-                             <option value="big data Consulting">Big Data consulting</option>
+                            <option [value]="rel" *ngFor="let rel of relatedItems">{{rel}}</option>
                         </select>
                         <div *ngIf="related.invalid && related.touched">
                           <p class="text-danger mb-0" *ngIf="related.errors?.required">Related is required</p>
