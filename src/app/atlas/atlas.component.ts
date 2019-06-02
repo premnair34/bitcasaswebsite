@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {  ReactiveFormsModule, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { map} from "rxjs/operators";
+import { environment } from './../../environments/environment';
 import * as AOS from 'aos';
-// import * as emailjs from 'emailjs';
-// var server 	= emailjs.server.connect({
-//    user:    "info@bitcasas.com",
-//    password:"Hello@Casas",
-//    host:    "Gmail",
-//    ssl:     true
-// });
 @Component({
     selector: 'app-atlas',
     templateUrl: './atlas.component.html',
@@ -15,8 +11,9 @@ import * as AOS from 'aos';
 })
 export class AtlasComponent implements OnInit {
     contactForm: FormGroup;
+    successMsg:any;
     relatedItems:any = ['Services','Corporate training','Big Data consulting','Blockchain'];
-    constructor( private formbuilder: FormBuilder) {
+    constructor( private formbuilder: FormBuilder,private http: HttpClient) {
     }
 
     // <div>Name: ${this.contactForm.name}</div>
@@ -54,6 +51,14 @@ export class AtlasComponent implements OnInit {
     }
     submitContact(formDirective) {
       console.log(this.contactForm.value);
+      this.http.post(environment.apiUrl + "contactus",this.contactForm.value)
+      // .pipe(map(res => res))
+      .subscribe((res:any) => {
+        this.successMsg = res.message;
+        // console.log(res)
+      },(err) => {
+        this.successMsg = err.message;
+      });
       this.contactForm.reset();
       formDirective.resetForm(formDirective);
     }

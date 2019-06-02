@@ -154,7 +154,7 @@
                 <li>Unlimited Support</li>
             </ul>
             <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
-        </div> 
+        </div>
     </div>-->
 </div>
 <!-- client -->
@@ -236,7 +236,9 @@
                         </div>
                     </div>
                     <button type="submit"
-                        class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3" [disabled]="!contactForm.valid">Submit</button>
+                        class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3"
+                        [disabled]="!contactForm.valid">Submit</button>
+                    <div class='text-white'>{{successMsg}}</div>
                 </form>
             </div>
         </div>
