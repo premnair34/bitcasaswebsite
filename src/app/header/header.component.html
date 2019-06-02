@@ -1,18 +1,21 @@
 <header>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="mt-3 pl-2">
-                <a class="logo" href="/"></a> 
-            </div>
-        </div>
-        <div class="col-sm-8 text-center">
-            <ul class="m-0 list-inline">
-                <li class="list-inline-item">Home</li>
-                <li class="list-inline-item">About</li>
-                <li class="list-inline-item">Services</li>
-                <li class="list-inline-item">Blog</li>
-                <li class="list-inline-item">Contact US</li>
-            </ul>
-        </div>
-    </div>
+    <div class="container">
+      <div class="row">
+        <!-- justify-content-between -->
+          <div class="col-2">
+              <span class="header-logo" routerLink="/"></span>
+          </div>
+          <div class="col-10 text-right">
+              <ul class="m-0 list-inline">
+                  <li class="list-inline-item" routerLink="/">Home</li>
+                  <!-- <li class="list-inline-item"  (click)="jumpTo('about')">About</li>
+                  <li class="list-inline-item" (click)="jumpTo('services')">Services</li>
+                  <li class="list-inline-item" (click)="jumpTo('training')">Training</li>
+                  <li class="list-inline-item" (click)="jumpTo('products')">Solutions</li>
+                  <li class="list-inline-item">Blog</li>
+                  <li class="list-inline-item" (click)="jumpTo('contact')">Contact Us</li> -->
+              </ul>
+          </div>
+      </div>
+  </div>
 </header>

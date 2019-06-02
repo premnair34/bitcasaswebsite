@@ -8,13 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AtlasComponent } from './atlas/atlas.component';
+import { FaqComponent } from './faq/faq.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AtlasComponent
+    AtlasComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
