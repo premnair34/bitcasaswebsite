@@ -3,16 +3,25 @@
     width: 80px;
     height: 80px;
 }
+#banner,#training,#subscribe{
+  background: $header-color;
+}
+#services{
+  background: #eceeef;
+}
+#contact{
+  background:#192440;
+}
 .header-logo{
     display: inline-block;
     width:120px;
     height:100px;
-    background:url('../../assets/images/logo.png');
+    background:url('../../assets/images/logo-dark.png');
     background-size: 100%;
     background-position: 0 -28px;
 }
 .list-inline-item {
-    color:$header-color;
+    // color:$header-color;
     padding: 15px 10px;
     cursor: pointer;
     &:hover {
