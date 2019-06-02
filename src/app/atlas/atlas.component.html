@@ -13,7 +13,7 @@
                 <div class="col-10 text-right">
                     <ul class="m-0 list-inline">
                         <li class="list-inline-item">Home</li>
-                        <li class="list-inline-item">About</li>
+                        <li class="list-inline-item"  (click)="jumpTo('about')">About</li>
                         <li class="list-inline-item" (click)="jumpTo('services')">Services</li>
                         <li class="list-inline-item" (click)="jumpTo('training')">Training</li>
                         <li class="list-inline-item" (click)="jumpTo('products')">Solutions</li>
@@ -51,9 +51,9 @@
 </div>
 <!-- three-blcok -->
 <div class="jumbotron jumbotron-fluid" id="services" >
-    <div class='container'>
+    <div class='container my-4'>
       <h2 class="font-weight-bold text-center my-4">Our Services</h2>
-      <div class="row">
+      <div class="row my-4">
           <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true"
               class="col-md-4 text-center">
               <img src="../../assets/images/blockchain.png" alt="Blockchain" class="mx-auto img-section">
@@ -82,7 +82,7 @@
 </div>
 <!-- feature (skew background) -->
 <div class="jumbotron jumbotron-fluid feature" id="training">
-    <div class="container my-5">
+    <div class="container my-4">
         <div class="row justify-content-between text-center text-md-left">
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
                 <h2 class="font-weight-bold">Corporate Training and Enablement</h2>
@@ -101,7 +101,7 @@
 </div>
 <!-- feature (green background) -->
 <div class="jumbotron jumbotron-fluid feature" id="products">
-    <div class="container">
+    <div class="container my-4">
         <div class="row justify-content-between text-center text-md-left">
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
                 <h2 class="font-weight-bold">Blockchain, Cloud and Big Data Consulting</h2>
@@ -125,7 +125,7 @@
 </div>
 <!-- subscrbe -->
 <div class="jumbotron jumbotron-fluid" id="subscribe">
-    <div class="container my-5">
+    <div class="container my-4">
         <div class="row justify-content-between">
           <div class="col-md-6">
               <h2 class="font-weight-bold">Subscribe to Our Newsletter</h2>
@@ -147,10 +147,9 @@
     </div>
 </div>
 <!-- price table -->
-<div class="jumbotron jumbotron-fluid feature" id="price-table">
-      <div class="container my-5">
+<div class="jumbotron jumbotron-fluid feature" id="about">
+      <div class="container my-4">
         <h2 class="text-center font-weight-bold d-block mb-3">About Us</h2>
-
         <p class="my-4">
             As experts in Blockchain, Cloud Native and Big Data technologies, we support clients with Blockchain Development, Cloud Migrations, and Data Pipeline. Our unique approach starts with understanding your specific needs. Then, together with your team, we design and implement custom solutions made to last. Our diverse team of experts is equipped with a broad range of blockchain, cloud native, big data skills, with a focus on data processing and microservices. .
         </p>
@@ -223,7 +222,7 @@
 <!-- contact -->
 <div class="jumbotron jumbotron-fluid" id="contact">
   <!-- style="background-image: url(../../assets/images/contact-bk.jpg);" -->
-    <div class="container my-5">
+    <div class="container my-4">
         <div class="row justify-content-between">
             <div class="col-md-6 text-white">
                 <h2 class="font-weight-bold">Contact Us</h2>
