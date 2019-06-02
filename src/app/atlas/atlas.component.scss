@@ -27,3 +27,18 @@ select{
   border-color:#fff;
   color:#fff;
 }
+#subscribe{
+  h2{
+    font-size:1.8em !important;
+  }
+  #contact-form{
+      position:relative;
+      .fa-long-arrow-alt-right {
+          color: #3f3d56;
+          font-size: 20px;
+          position: absolute;
+          top: 15px;
+          right: 10px;
+    }
+  }
+}

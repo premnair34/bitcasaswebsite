@@ -35,7 +35,7 @@ app.post('/api/contactus',(req,res) => {
 app.post('/api/subscribe',(req,res) => {
   var html = `<div>Email:  ${req.body.email}</div>`;
   var subject = `Neaxture - ${req.body.email} subscribed our letters`;
-  sendMail(subject,body);
+  sendMail(subject,html);
   res.status(200).json({'error':false,message:'You have subscribed to news letters sucessfully'});
 });
 function sendMail(subject,body){

@@ -12,6 +12,8 @@ import * as AOS from 'aos';
 export class AtlasComponent implements OnInit {
     contactForm: FormGroup;
     successMsg:any;
+    subscribeForm: FormGroup;
+    isSuccess:boolean = false;
     relatedItems:any = ['Services','Corporate training','Big Data consulting','Blockchain'];
     constructor( private formbuilder: FormBuilder,private http: HttpClient) {
     }
@@ -24,9 +26,12 @@ export class AtlasComponent implements OnInit {
         AOS.init();
         this.contactForm = this.formbuilder.group({
           name: ['', Validators.required],
-          email:['', Validators.required],
+          email:['', Validators.required, Validators.email],
           related:['Services', Validators.required],
           message:['', Validators.required]
+        });
+        this.subscribeForm = this.formbuilder.group({
+          email: ['', [Validators.required, Validators.email]]
         });
     }
 
@@ -49,8 +54,19 @@ export class AtlasComponent implements OnInit {
       this.jumpTo(section);
       this.contactForm.controls['related'].setValue(this.relatedItems[val]);
     }
+    subscriptionForm() {
+      if (this.subscribeForm.valid) {
+        this.http.post(environment.apiUrl + "subscribe",this.subscribeForm.value)
+          .subscribe((res: any) => {
+              this.subscribeForm.reset();
+              this.isSuccess = true;
+              setTimeout(() => {
+                this.isSuccess = false;
+              }, 5000);
+          });
+      }
+    }
     submitContact(formDirective) {
-      console.log(this.contactForm.value);
       this.http.post(environment.apiUrl + "contactus",this.contactForm.value)
       // .pipe(map(res => res))
       .subscribe((res:any) => {
