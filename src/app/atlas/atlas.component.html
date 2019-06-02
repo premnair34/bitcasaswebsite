@@ -204,14 +204,14 @@
                 <form [formGroup]="contactForm" (ngSubmit)="submitContact(formDirective)"  #formDirective="ngForm">
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="name">Your Name *</label>
+                            <label for="name">Name *</label>
                             <input type="name" class="form-control" id="name" required formControlName="name">
                             <div *ngIf="name.invalid && name.touched">
                               <p class="text-danger mb-0" *ngIf="name.errors?.required">Name is required</p>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="Email">Your Email *</label>
+                            <label for="Email">Email *</label>
                             <input type="email" class="form-control" id="Email" required formControlName="email">
                             <div *ngIf="email.invalid && email.touched">
                               <p class="text-danger mb-0" *ngIf="email.errors?.required">Email is required</p>
@@ -235,9 +235,10 @@
                           <p class="text-danger mb-0" *ngIf="message.errors?.required">Message is required</p>
                         </div>
                     </div>
+                    <!-- {{contactForm.invalid}} -->
                     <button type="submit"
                         class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3"
-                        [disabled]="!contactForm.valid">Submit</button>
+                        [disabled]="contactForm.invalid">Submit</button>
                     <div class='text-white'>{{successMsg}}</div>
                 </form>
             </div>
