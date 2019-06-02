@@ -12,7 +12,7 @@
                         <li class="list-inline-item">About</li>
                         <li class="list-inline-item" (click)="jumpTo('services')">Services</li>
                         <li class="list-inline-item" (click)="jumpTo('training')">Training</li>
-                        <li class="list-inline-item" (click)="jumpTo('products')">Products</li>
+                        <li class="list-inline-item" (click)="jumpTo('products')">Solutions</li>
                         <li class="list-inline-item">Blog</li>
                         <li class="list-inline-item" (click)="jumpTo('contact')">Contact Us</li>
                     </ul>
@@ -113,8 +113,12 @@
 
 <!-- price table -->
 <div class="container my-5 py-2" id="price-table">
-    <h2 class="text-center font-weight-bold d-block mb-3">Our Work</h2>
-    <div class="row">
+    <h2 class="text-center font-weight-bold d-block mb-3">About Us</h2>
+
+    <p class="my-4">
+        As experts in Blockchain, Cloud Native and Big Data technologies, we support clients with Blockchain Development, Cloud Migrations, and Data Pipeline. Our unique approach starts with understanding your specific needs. Then, together with your team, we design and implement custom solutions made to last. Our diverse team of experts is equipped with a broad range of blockchain, cloud native, big data skills, with a focus on data processing and microservices. .
+    </p>
+    <!-- <div class="row">
         <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
             class="col-md-4 text-center py-4 mt-5">
             <h4 class="my-4">STARTUP</h4>
@@ -150,8 +154,8 @@
                 <li>Unlimited Support</li>
             </ul>
             <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
-        </div>
-    </div>
+        </div> 
+    </div>-->
 </div>
 <!-- client -->
 <!-- client -->
@@ -186,14 +190,15 @@
             <div class="col-md-6 text-white">
                 <h2 class="font-weight-bold">Contact Us</h2>
                 <p class="my-4">
-                    Te iisque labitur eos, nec sale argumentum scribentur,
-                    <br> augue disputando in vim. Erat fugit sit at, ius lorem.
+                    Have a Question?
+                    <br> Read our FAQs for answers to some commonly asked questions. If not answered there, shoot an email at one of the following email or submit the form.
                 </p>
                 <ul class="list-unstyled">
-                    <li>Email : company_email@com</li>
-                    <li>Phone : 361-688-5824</li>
-                    <li>Address : 4826 White Avenue, Corpus Christi, Texas</li>
+                    <li>Email : info@nearxture.com</li>
                 </ul>
+                <p class="m4-4">
+                    For more efficient responses by our staff, please adopt this subject line format: “[Department you are contacting]: [Message topic] – [your full name]”. We aim to get back to you within 2-3 business days.
+                </p>
             </div>
             <div class="col-md-6">
                 <form [formGroup]="contactForm" (ngSubmit)="submitContact(formDirective)"  #formDirective="ngForm">
