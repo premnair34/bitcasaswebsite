@@ -1,4 +1,6 @@
-<div class="jumbotron jumbotron-fluid" id="banner" style="background-image: url(../../assets/images/banner-bk.jpg);">
+<div class="jumbotron jumbotron-fluid" id="banner" >
+
+  <!-- style="background-image: url(../../assets/images/banner-bk.jpg);" -->
     <div class="container text-center text-md-left">
         <header>
             <div class="row">
@@ -21,15 +23,15 @@
         </header>
         <div class="my-5">
                 <h4 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                class="display-4 text-white font-weight-bold my-5">
+                class="display-4 text-white1 font-weight-bold my-5">
                 Meet nearXture
             </h4>
             <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                class="lead text-white my-3">
+                class="lead text-white1 my-3">
                 The Enterprise and Public Blockchain, Cloud, Data Pipeline and IOT Solutions nearXture brings your projects to life with advanced technologies
             </p>
             <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                class="lead text-white my-3">
+                class="lead text-white1 my-3">
                 We are on a mission to simplify the development process, deployment pipeline, and scaling of complex enterprise applications and to bring the full power of current technologies to developers and enterprises, everywhere.
             </p>
             <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
@@ -39,32 +41,34 @@
     </div>
 </div>
 <!-- three-blcok -->
-<div class="container my-5 py-2" id="services" >
-    <h2 class="font-weight-bold text-center my-4">Our Services</h2>
-    <div class="row">
-        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true"
-            class="col-md-4 text-center">
-            <img src="../../assets/images/blockchain.png" alt="Blockchain" class="mx-auto img-section">
-            <h3 class="my-4">Blockchain</h3>
-            <p>nearXture mainly focused on enabling businesses and organisations to capitalise on blockchain and distributed systems technology that benefit from the new opportunities it presents.
-            </p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
-            class="col-md-4 text-center">
-            <img src="../../assets/images/cloud-native.png" alt="Cloud Native" class="mx-auto img-section">
-            <h3 class="my-4">Cloud Native</h3>
-            <p>We build dynamically managed cloud native systems using highly tuned Kubernetes platforms and container applications to support rapid and continuous application development and deployment.
+<div class="jumbotron jumbotron-fluid" id="services" >
+    <div class='container'>
+      <h2 class="font-weight-bold text-center my-4">Our Services</h2>
+      <div class="row">
+          <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true"
+              class="col-md-4 text-center">
+              <img src="../../assets/images/blockchain.png" alt="Blockchain" class="mx-auto img-section">
+              <h3 class="my-4">Blockchain</h3>
+              <p>nearXture mainly focused on enabling businesses and organisations to capitalise on blockchain and distributed systems technology that benefit from the new opportunities it presents.
+              </p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
+              class="col-md-4 text-center">
+              <img src="../../assets/images/cloud-native.png" alt="Cloud Native" class="mx-auto img-section">
+              <h3 class="my-4">Cloud Native</h3>
+              <p>We build dynamically managed cloud native systems using highly tuned Kubernetes platforms and container applications to support rapid and continuous application development and deployment.
 
-            </p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true"
-            class="col-md-4 text-center">
-            <img src="../../assets/images/data-pipeline.png" alt="Data Pipeline" class="mx-auto img-section">
-            <h3 class="my-4">Data Pipeline</h3>
-            <p>Meet business and IT challenges of data management in the new technology era with a more reliable and scalable data pipeline platform by leveraging best-of-breed cloud and open source technologies.
+              </p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true"
+              class="col-md-4 text-center">
+              <img src="../../assets/images/data-pipeline.png" alt="Data Pipeline" class="mx-auto img-section">
+              <h3 class="my-4">Data Pipeline</h3>
+              <p>Meet business and IT challenges of data management in the new technology era with a more reliable and scalable data pipeline platform by leveraging best-of-breed cloud and open source technologies.
 
-            </p>
-        </div>
+              </p>
+          </div>
+      </div>
     </div>
 </div>
 <!-- feature (skew background) -->
@@ -110,52 +114,76 @@
         </div>
     </div>
 </div>
-
+<!-- subscrbe -->
+<div class="jumbotron jumbotron-fluid" id="subscribe">
+    <div class="container my-5">
+        <div class="row justify-content-between">
+          <div class="col-md-6">
+              <h2 class="font-weight-bold">Subscribe to Our Newsletter</h2>
+              <p class="my-4">
+                  Enter your email id to get notified about the latest portfolio updates.
+              </p>
+          </div>
+          <div class="col-md-6">
+              <form id="contact-form" class="form-message text-left"
+                [formGroup]="subscribeForm">
+                <input type="email" placeholder="Email address"
+                class="w-100 p-2" required formControlName="email" (keyup.enter)="subscriptionForm()"/>
+                <a (click)="subscriptionForm()"><i class="fas fa-long-arrow-alt-right"></i></a>
+                <span *ngIf="isSuccess" class="msg-subscribe success">You have subscribed to news letter successfully</span>
+                <span *ngIf="isError" class="msg-subscribe error">Something wrong please try again later</span>
+              </form>
+          </div>
+        </div>
+    </div>
+</div>
 <!-- price table -->
-<div class="container my-5 py-2" id="price-table">
-    <h2 class="text-center font-weight-bold d-block mb-3">About Us</h2>
+<div class="jumbotron jumbotron-fluid feature" id="price-table">
+      <div class="container my-5">
+        <h2 class="text-center font-weight-bold d-block mb-3">About Us</h2>
 
-    <p class="my-4">
-        As experts in Blockchain, Cloud Native and Big Data technologies, we support clients with Blockchain Development, Cloud Migrations, and Data Pipeline. Our unique approach starts with understanding your specific needs. Then, together with your team, we design and implement custom solutions made to last. Our diverse team of experts is equipped with a broad range of blockchain, cloud native, big data skills, with a focus on data processing and microservices. .
-    </p>
-    <!-- <div class="row">
-        <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
-            class="col-md-4 text-center py-4 mt-5">
-            <h4 class="my-4">STARTUP</h4>
-            <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">0</span> / MO.</p>
-            <ul class="list-unstyled">
-                <li>Up to 5 Documents</li>
-                <li>Up to 3 Reviews</li>
-                <li>5 team Members</li>
-                <li>Limited Support</li>
-            </ul>
-            <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"
-            class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
-            <h4 class="my-4">PREMIUM</h4>
-            <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">10</span> / MO.</p>
-            <ul class="list-unstyled">
-                <li>Up to 15 Documents</li>
-                <li>Up to 10 Reviews</li>
-                <li>25 team Members</li>
-                <li>Limited Support</li>
-            </ul>
-            <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-green">Get Free</a>
-        </div>
-        <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
-            class="col-md-4 text-center py-4 mt-5">
-            <h4 class="my-4">PROFESSIONAL</h4>
-            <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">30</span> / MO.</p>
-            <ul class="list-unstyled">
-                <li>Unlimited Documents</li>
-                <li>Unlimited Reviews</li>
-                <li>Unlimited Members</li>
-                <li>Unlimited Support</li>
-            </ul>
-            <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
-        </div>
-    </div>-->
+        <p class="my-4">
+            As experts in Blockchain, Cloud Native and Big Data technologies, we support clients with Blockchain Development, Cloud Migrations, and Data Pipeline. Our unique approach starts with understanding your specific needs. Then, together with your team, we design and implement custom solutions made to last. Our diverse team of experts is equipped with a broad range of blockchain, cloud native, big data skills, with a focus on data processing and microservices. .
+        </p>
+      <!-- <div class="row">
+          <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
+              class="col-md-4 text-center py-4 mt-5">
+              <h4 class="my-4">STARTUP</h4>
+              <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">0</span> / MO.</p>
+              <ul class="list-unstyled">
+                  <li>Up to 5 Documents</li>
+                  <li>Up to 3 Reviews</li>
+                  <li>5 team Members</li>
+                  <li>Limited Support</li>
+              </ul>
+              <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"
+              class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
+              <h4 class="my-4">PREMIUM</h4>
+              <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">10</span> / MO.</p>
+              <ul class="list-unstyled">
+                  <li>Up to 15 Documents</li>
+                  <li>Up to 10 Reviews</li>
+                  <li>25 team Members</li>
+                  <li>Limited Support</li>
+              </ul>
+              <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-green">Get Free</a>
+          </div>
+          <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
+              class="col-md-4 text-center py-4 mt-5">
+              <h4 class="my-4">PROFESSIONAL</h4>
+              <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">30</span> / MO.</p>
+              <ul class="list-unstyled">
+                  <li>Unlimited Documents</li>
+                  <li>Unlimited Reviews</li>
+                  <li>Unlimited Members</li>
+                  <li>Unlimited Support</li>
+              </ul>
+              <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
+          </div>
+      </div>-->
+  </div>
 </div>
 <!-- client -->
 <!-- client -->
@@ -184,7 +212,8 @@
     </div>
 </div> -->
 <!-- contact -->
-<div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(../../assets/images/contact-bk.jpg);">
+<div class="jumbotron jumbotron-fluid" id="contact">
+  <!-- style="background-image: url(../../assets/images/contact-bk.jpg);" -->
     <div class="container my-5">
         <div class="row justify-content-between">
             <div class="col-md-6 text-white">
@@ -241,29 +270,6 @@
                     <div class='text-white'>{{successMsg}}</div>
                 </form>
             </div>
-        </div>
-    </div>
-</div>
-<!-- subscrbe -->
-<div class="jumbotron jumbotron-fluid" id="subscribe">
-    <div class="container my-5">
-        <div class="row justify-content-between">
-          <div class="col-md-6">
-              <h2 class="font-weight-bold">Subscribe to Our Newsletter</h2>
-              <p class="my-4">
-                  Enter your email id to get notified about the latest portfolio updates.
-              </p>
-          </div>
-          <div class="col-md-6">
-              <form id="contact-form" class="form-message text-left"
-                [formGroup]="subscribeForm">
-                <input type="email" placeholder="Email address"
-                class="w-100 p-2" required formControlName="email" (keyup.enter)="subscriptionForm()"/>
-                <a (click)="subscriptionForm()"><i class="fas fa-long-arrow-alt-right"></i></a>
-                <span *ngIf="isSuccess" class="msg-subscribe success">You have subscribed to news letter successfully</span>
-                <span *ngIf="isError" class="msg-subscribe error">Something wrong please try again later</span>
-              </form>
-          </div>
         </div>
     </div>
 </div>
