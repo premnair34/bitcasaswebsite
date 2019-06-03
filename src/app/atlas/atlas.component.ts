@@ -14,6 +14,7 @@ export class AtlasComponent implements OnInit {
     successMsg:any;
     subscribeForm: FormGroup;
     isSuccess:boolean = false;
+    isError:boolean = false;
     relatedItems:any = ['Services','Corporate training','Big Data consulting','Blockchain'];
     constructor( private formbuilder: FormBuilder,private http: HttpClient) {
     }
@@ -63,6 +64,11 @@ export class AtlasComponent implements OnInit {
               setTimeout(() => {
                 this.isSuccess = false;
               }, 5000);
+          },() =>{
+            this.isError = true;
+            setTimeout(() => {
+              this.isError = false;
+            }, 5000);
           });
       }
     }
