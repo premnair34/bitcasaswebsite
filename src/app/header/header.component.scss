@@ -3,23 +3,3 @@
     width: 80px;
     height: 80px;
 }
-.header-logo{
-    display: inline-block;
-    width:120px;
-    height:100px;
-    background:url('../../assets/images/logo-dark.png');
-    background-size: 100%;
-    background-position: 0 -28px;
-}
-.header-logo{
-  outline: none;
-}
-.list-inline-item {
-    // color:$header-color;
-    outline: none;
-    padding: 15px 10px;
-    cursor: pointer;
-    &:hover {
-        background: $header-bgcolor;
-    }
-}
