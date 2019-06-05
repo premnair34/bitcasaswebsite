@@ -12,6 +12,12 @@
 #contact{
   background:#192440;
 }
+.faq-link{
+  cursor: pointer;
+  &:hover{
+    color:#fff;
+  }
+}
 .header-logo{
     display: inline-block;
     width:120px;
