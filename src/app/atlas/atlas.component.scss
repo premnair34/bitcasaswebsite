@@ -46,6 +46,9 @@ select{
   }
   #contact-form{
       position:relative;
+      input{
+        border: 1px solid #ddd;
+      }
       .fa-long-arrow-alt-right {
           color: #3f3d56;
           font-size: 20px;
