@@ -13,10 +13,9 @@ a,
 button {
     cursor: pointer;
 }
-
 .jumbotron {
     margin-bottom: 0 !important;
-    padding: 2rem !important;
+    /* padding: 2rem !important; */
 }
 
 .atlas-cta {
@@ -36,8 +35,8 @@ button {
 }
 
 .cta-green {
-    background: #0C4C89;
-    color: #fff;
+    background: #0C4C89 !important;
+    color: #fff !important;
 }
 
 .cta-green:hover {
@@ -45,11 +44,10 @@ button {
     background: #0C4C89;
 }
 
-.cta-blue {
+.cta-blue{
     background: #192440;
     color: #ffffff;
 }
-
 .cta-blue:hover {
     color: #ffffff;
     background: #121a2e;
@@ -130,8 +128,13 @@ button {
 /********** copyright **********/
 #copyright {
     background: #192440;
-    padding: 2rem 3rem;
+    /* padding: 2rem 3rem; */
+    position: relative;
+    bottom: 0;
+    width: 100%
 }
+
+
 
 #copyright #social-media a {
     width: 40px;

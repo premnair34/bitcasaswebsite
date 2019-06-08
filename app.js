@@ -29,16 +29,16 @@ app.post('/api/contactus',(req,res) => {
               <div>Query:  ${req.body.related}</div>
               <div>Messages:  ${req.body.message}</div>`;
   var subject = `Neaxture - ${req.body.name} contacted you`;
-  sendMail(subject,body);
+  sendMail(subject,body,req.body.email);
   res.status(200).json({'error':false,message:'We will get back to you soon'});
 });
 app.post('/api/subscribe',(req,res) => {
   var html = `<div>Email:  ${req.body.email}</div>`;
   var subject = `Neaxture - ${req.body.email} subscribed our letters`;
-  sendMail(subject,html);
+  sendMail(subject,html,req.body.email);
   res.status(200).json({'error':false,message:'You have subscribed to news letters sucessfully'});
 });
-function sendMail(subject,body){
+function sendMail(subject,body,email){
   var mailOptions = {
     to : process.env.EMAIL_USER,
     subject :subject,

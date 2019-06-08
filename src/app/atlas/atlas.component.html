@@ -1,48 +1,67 @@
-<div class="jumbotron jumbotron-fluid" id="banner">
-    <div class="container text-center text-md-left">
-        <header>
-            <div class="row">
-              <!-- justify-content-between -->
-                <div class="col-2">
-                    <span class="header-logo"></span>
-                </div>
-                <div class="col-10 text-right">
-                    <ul class="m-0 list-inline">
-                        <li class="list-inline-item">Home</li>
-                        <li class="list-inline-item" (click)="jumpTo('services')">Services</li>
-                        <li class="list-inline-item" (click)="jumpTo('training')">Training</li>
-                        <li class="list-inline-item"  (click)="jumpTo('about')">About</li>
-                        <li class="list-inline-item" (click)="jumpTo('contact')">Contact Us</li>
-                        <li class="list-inline-item" routerLink="/careers">Careers</li>
-
-                        <!-- <li class="list-inline-item" (click)="jumpTo('products')">Solutions</li> -->
-                        <li class="list-inline-item">Blog</li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <div class="row">
-            <div class="col-md-6">
-              <div class="my-5">
-                      <h4 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                      class="display-4 text-white1 font-weight-bold my-5">
-                      Meet nearXture
-                  </h4>
-                  <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                      class="lead text-white1 my-3">
-                      Your trusted business and technology partner for digital transformation.                  </p>
-                  <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                      class="lead text-white1 my-3">
-                      We are on a mission to simplify the development process, deployment pipeline, and scaling of complex enterprise applications and to bring the full power of current technologies to developers and enterprises, everywhere.
-                  </p>
-                  <!-- <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                      class="btn my-5 font-weight-bold atlas-cta cta-green">Get Started</a> -->
+<div id="banner">
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" routerLink="/">
+                <span class="header-logo"></span>
+              </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navmenu" aria-controls="navmenu"
+                 aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </button>
+              <div class="collapse navbar-collapse justify-content-md-center" id="navmenu">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="jumpTo('services')">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="jumpTo('training')">Training</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="jumpTo('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" (click)="jumpTo('contact')">Contact Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" (click)="jumpTo('products')">Solutions</a>
+                    </li> -->
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/careers">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Blog</a>
+                    </li>
+                  </ul>
               </div>
-            </div>
-            <div class="col-md-6">
-              <img src="../../assets/undraw/undraw_bug_fixing_oc7a.svg" />
-            </div>
         </div>
+    </nav>
+    <div  class="jumbotron jumbotron-fluid">
+      <div class="container text-center text-md-left">
+          <div class="row no-gutters">
+              <div class="col-md-6">
+                <div>
+                    <h4 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
+                        class="display-4 text-white1 font-weight-bold mb-md-5">
+                        Meet nearXture
+                    </h4>
+                    <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
+                        class="lead text-white1 my-3">
+                        Your trusted business and technology partner for digital transformation.                  </p>
+                    <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
+                        class="lead text-white1 my-3">
+                        We are on a mission to simplify the development process, deployment pipeline, and scaling of complex enterprise applications and to bring the full power of current technologies to developers and enterprises, everywhere.
+                    </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <img id='banner-image' src="../../assets/undraw/undraw_bug_fixing_oc7a.svg" />
+              </div>
+          </div>
+      </div>
     </div>
 </div>
 <!-- three-blcok -->
@@ -82,13 +101,13 @@
         <div class="row justify-content-between text-center text-md-left">
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
                 <h2 class="font-weight-bold">Corporate Training and Enablement</h2>
-                <p class="my-4 text-justify">nearXture enables developers, infrastructure architects, and operators to train 
+                <p class="my-4 text-justify">nearXture enables developers, infrastructure architects, and operators to train
                     with the same expert practitioners that deliver solutions to our clients.
                     </p>
                     <p class="my-4 text-justify">
-                            We at nearXture, created modular training program to boost your knowlege. Tailor-made training courses for thebasics, latest insights and next-gen technologies. Provided by our gurus, the top in their area of expertise.
+                      We at nearXture, created modular training program to boost your knowlege. Tailor-made training courses for the basics, latest insights and next-gen technologies. Provided by our gurus, the top in their area of expertise.
                     </p>
-                <a class="btn my-4 font-weight-bold atlas-cta cta-blue" (click)="scrollContact('contact',1)">Learn More</a>
+                <a class="my-4 font-weight-bold atlas-cta cta-blue" (click)="scrollContact('contact',1)">Learn More</a>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
                 <!-- <img src="../../assets/corporate-training.jpg" alt="Take a look inside" class="mx-auto d-block"> -->
@@ -111,7 +130,7 @@
                     with a full suite of resources, education, and access to our qualified consultant and
                     developer pool. We also offer a wide variety of services.
                 </p>
-                <a class="btn my-4 font-weight-bold atlas-cta cta-blue"  (click)="scrollContact('contact',2)">Learn More</a>
+                <a class="my-4 font-weight-bold atlas-cta cta-blue"  (click)="scrollContact('contact',2)">Learn More</a>
             </div>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true"
                 class="col-md-6 align-self-center flex-md-first">
@@ -283,7 +302,7 @@
 </div>
 <!-- end -->
 <!-- copyright -->
-<div class="jumbotron jumbotron-fluid" id="copyright">
+<div class="py-2" id="copyright">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-md-6 text-white align-self-center text-center text-md-left my-2">

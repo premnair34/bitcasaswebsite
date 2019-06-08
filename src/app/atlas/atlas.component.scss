@@ -3,8 +3,11 @@
     width: 80px;
     height: 80px;
 }
-#banner,#training,#subscribe{
+#banner,#training,#subscribe,#banner > .jumbotron{
   background: $header-color;
+}
+#banner .jumbotron{
+  padding: 8em 0em;
 }
 #services{
   background: #eceeef;
@@ -18,21 +21,16 @@
     color:#fff;
   }
 }
+.navbar-nav .nav-link{
+      color: #007bff;
+}
 .header-logo{
     display: inline-block;
-    width:120px;
-    height:100px;
+    width: 120px;
+    height: 55px;
     background:url('../../assets/images/logo-dark.png');
     background-size: 100%;
     background-position: 0 -28px;
-}
-.list-inline-item {
-    // color:$header-color;
-    padding: 15px 10px;
-    cursor: pointer;
-    &:hover {
-        background: $header-bgcolor;
-    }
 }
 .cta-blue{
   color:#fff !important;
@@ -48,6 +46,9 @@ select{
   }
   #contact-form{
       position:relative;
+      input{
+        border: 1px solid #ddd;
+      }
       .fa-long-arrow-alt-right {
           color: #3f3d56;
           font-size: 20px;

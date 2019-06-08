@@ -15,7 +15,7 @@ export class AtlasComponent implements OnInit {
     subscribeForm: FormGroup;
     isSuccess:boolean = false;
     isError:boolean = false;
-    relatedItems:any = ['Services','Corporate training','Big Data consulting','Blockchain'];
+    relatedItems:any = ['Services','Corporate training','Consulting'];
     constructor( private formbuilder: FormBuilder,private http: HttpClient) {
     }
 
