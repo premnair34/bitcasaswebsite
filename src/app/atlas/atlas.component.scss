@@ -3,6 +3,9 @@
     width: 80px;
     height: 80px;
 }
+#banner{
+  height: 100vh;
+}
 #banner,#training,#subscribe,#banner > .jumbotron{
   background: $header-color;
 }
