@@ -1,5 +1,12 @@
 .border {
     border: 1px solid #dee2e6!important;
+    position: relative;
+    .btn-wrapper{
+      text-align: center;
+      a{
+        display: inline-flex;
+      }
+    }
 }
 #careers{
   background: #fff;
