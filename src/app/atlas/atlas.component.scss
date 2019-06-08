@@ -3,9 +3,6 @@
     width: 80px;
     height: 80px;
 }
-#banner{
-  height: 100vh;
-}
 #banner,#training,#subscribe,#banner > .jumbotron{
   background: $header-color;
 }
@@ -32,14 +29,6 @@
     background-size: 100%;
     background-position: 0 -28px;
 }
-// .list-inline-item {
-//     // color:$header-color;
-//     padding: 15px 10px;
-//     cursor: pointer;
-//     &:hover {
-//         background: $header-bgcolor;
-//     }
-// }
 .cta-blue{
   color:#fff !important;
 }
@@ -63,6 +52,6 @@ select{
     }
   }
 }
-.h-80{
-  height: calc(100vh - 300px);
+.banner-content{
+  height:80%;
 }
