@@ -6,6 +6,9 @@
 #banner,#training,#subscribe,#banner > .jumbotron{
   background: $header-color;
 }
+#banner .jumbotron{
+  padding: 8em 0em;
+}
 #services{
   background: #eceeef;
 }
@@ -51,7 +54,4 @@ select{
           right: 10px;
     }
   }
-}
-.banner-content{
-  height:75vh;
 }
